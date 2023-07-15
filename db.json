@@ -7,7 +7,7 @@
     ],
     "profile": { "name": "typicode" },
     "patient_rec":[{
-        "name":"hhh", "DOB":"hh","Address":"hhh","Gender":"hh","Blood_Group":"hh","Phone_Number":"gg","Medical_History":"","Blood_Donation_History":"","Organ_Donation":"","Date":"","Time":"","Disease":""},{
-            "name":"Arpita", "DOB":"kr","Address":"hhh","Gender":"hh","Blood_Group":"hh","Phone_Number":"gg","Medical_History":"","Blood_Donation_History":"","Organ_Donation":"","Date":"","Time":"","Disease":""}]
+        "fname":"","lname":"", "DOB":"","City":"","State":"","pincode":"","Gender":"","Blood_Group":"","Phone_Number":"","Email":"","Medical_History":"","Blood_Donation_History":"","Surgery":"","Height":"","Weight":"","Date":"","Time":"","Disease":""},{
+            }]
     
   }
