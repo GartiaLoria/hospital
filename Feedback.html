@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        
+        .one{
+             width:90%;
+             display:flex;
+             justify-content: center;
+             align-items: center;
+             flex-direction: column;
+             text-align: center;
+             margin:20px auto;
+        }
+        
+
+
+
+.image
+{
+               width: 100px;
+                 height: 100px;
+                
+                 border: 1px solid  whitesmoke;
+                border-radius: 50%;
+     
+}
+.review{
+       width:250px;
+       height: 350px;
+       display:flex;
+       flex-direction: column;
+       padding: 20px;
+       border: 5px solid  blueviolet;
+       border-radius: 20%;
+      
+}
+.two{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content:space-between;
+}
+.heading{
+              
+             display:flex;
+             justify-content: center;
+             align-items: center;
+             
+             text-align: center;
+             margin:20px auto;
+             font-style: italic;
+}
+body{
+            background: radial-gradient(827px at 47.3% 48%, rgb(255, 255, 255) 0%, rgb(138, 192, 216) 90%);
+        }
+
+       
+        
+    </style>
+</head>
+<body>
+    <div class ="five">
+        <h1 class = "heading">Customer Reviews</h1>
+    </div>
+    <div class ="two">
+    <div class = "review">
+    
+     <h1 >*****</h1>
+    <p>Dr Vijay Kumar Chennamchetty: We met Dr Vijay Chennamchetty last month with severe cough and sputum for my father Dr Varaprasad. His way of handling patients is excellent and so soothing that the patient feels immensely confident about recovery. Thanks to Dr. Vijay, within 2 weeks, he is completely normal.</p>
+     <img  class ="image"src="https://st3.depositphotos.com/1017228/18878/i/600/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg"   width : 10px height :10px alt="" srcset="">
+    </div>
+    <div class = "review">
+    
+        <h1>*****</h1>
+       <p>Dr Vijay Kumar Chennamchetty: We met Dr Vijay Chennamchetty last month with severe cough and sputum for my father Dr Varaprasad. His way of handling patients is excellent and so soothing that the patient feels immensely confident about recovery. Thanks to Dr. Vijay, within 2 weeks, he is completely normal.</p>
+        <img  class ="image"src="https://st3.depositphotos.com/1017228/18878/i/600/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg"   width : 10px height :10px alt="" srcset="">
+       </div>
+       <div class = "review">
+    
+        <h1>*****</h1>
+       <p>Dr Vijay Kumar Chennamchetty: We met Dr Vijay Chennamchetty last month with severe cough and sputum for my father Dr Varaprasad. His way of handling patients is excellent and so soothing that the patient feels immensely confident about recovery. Thanks to Dr. Vijay, within 2 weeks, he is completely normal.</p>
+        <img  class ="image"src="https://st3.depositphotos.com/1017228/18878/i/600/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg"   width : 10px height :10px alt="" srcset="">
+       </div>
+
+    </div>
+    </div>
+    <div class = "one">
+    <h1>FEEDBACK FORM</h1>
+    
+    <label>NAME</label>
+    <input id="name" type="text"/></br>
+    <label >CONTACT</label>
+    <input id = "contact" type="text"/></br>
+    <label >FEEDBACK</label>
+    <input  id = "feedback"type="text"/>
+    <button onclick="save()">submit</button>
+    
+    </div>
+     
+
+    
+</body>
+</html>
+<script>
+     let save = async () => {
+        
+        
+        let nm = document.getElementById("name").value;
+        let con  = document.getElementById("contact").value;
+        let feed = document.getElementById("feedback").value;
+        
+        let feedobj = {
+              NAME:nm,
+              CONTACT:con,
+              FEEDBACK:feed
+           
+            
+        };
+        console.log(feedobj);
+        let res = await fetch("http://localhost:3/feedback", {
+            method: "POST",
+            body: JSON.stringify(feedobj),
+            headers: {
+                "Content-Type":"application/json",
+            }
+        });
+    };
+</script>
