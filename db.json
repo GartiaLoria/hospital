@@ -9,3 +9,25 @@
     
     
   }
+"docobj": 
+    [
+      {
+        "email": "drmanojkumar@gmail.com",
+        "password": "Manoj1234",
+        "doctoken": 1689370932108,
+        "name":"Dr.Manoj Kumar"
+      },
+      {
+        "email": "drsarita@gmail.com",
+        "password": "Sarita1789",
+        "doctoken": 1689370932108,
+        "name":"Dr.Sarita"
+      },
+      {
+        "email": "drsudhanshu@gmail.com",
+        "password": "Sudha6758",
+        "doctoken": 1689370932108,
+        "name":"Dr.Sudhanshu"
+      }
+    
+  ]
