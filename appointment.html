@@ -65,7 +65,8 @@
             
         }
         .btn{
-            display: flex;
+            
+            /* display: flex;
             flex-direction: row;
             display: inline-block;
             color: #fff;
@@ -74,7 +75,23 @@
             border-radius: 5px;
             padding:12px 20 px;
             font-size :18px;
-            cursor:pointer;
+            cursor:pointer;  */
+            color: #fff;
+            padding: 15px 25px;
+            background-color: #38D2D2;
+            background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+            box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+            border-radius: 14px;
+            font-weight: bold;
+            font-size: 16px;
+
+            border: 0;
+
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+
+            cursor: pointer;
         }
         /* .contact{
             display: flex;
@@ -127,16 +144,20 @@
               <div class = "saloni">
               <form class ="one">
                 <div class =  "name">
-                <label style="font-size: x-large" >Patient Name</label>&nbsp;&nbsp;
-                <input type="text" id="patient-name" class="form-control" placeholder="Name" required><br><br>
+                <label style="font-size: x-large" >First Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="patient-name" class="form-control" placeholder="First Name" required><br><br>
                 </div></br>
+                <div class =  "name1">
+                    <label style="font-size: x-large" >Last Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" id="patient-name1" class="form-control" placeholder="LastName" required><br><br>
+                    </div></br>
                 <div class="contact">
                 <label style="font-size: x-large" >Contact</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="text" id="contact" class="form-control"placeholder="Phone number" required><br><br>
                 </div></br>
                 <div class="doc">               
                  <label style="font-size: x-large" >Doctors</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <select id="docs" title="Doctors"><br><br>
+                  <select  id="docs"  title="Doctors><br><br>
                     <option value = "">Select</option>
                     <option value ="Dr.Manoj Kumar">Dr.Manoj Kumar</option>
                     <option value = "Dr.Sarita">Dr.Sarita</option>
@@ -166,7 +187,8 @@
 </html>
 <script>
     let api="http://localhost:3/Appointment";
-  let submit = async() => {
+  let submit = async(daa) => {
+    event.preventDefault();
     let patient1 = document.getElementById("patient-name").value;
     console.log(patient1);
     let contact1 = document.getElementById("contact").value;
@@ -195,7 +217,37 @@
                 "Content-Type":"application/json"
             },
         });
-        let data = await res.json();
-        console.log(data);
+        
+        
+}
+let call = async () => {
+    
+      
+    selectelement = document.querySelector("#docs");
+    let output = selectelement.value;
+    console.log(output);
+    let res = await fetch("http://localhost:3/docobj");
+    let data = await res.json();
+
+    let res1 = await fetch("http://localhost:3/Appointment");
+    let data1 = await res1.json();
+    console.log(data1);
+    data.forEach(({ email,password,doctoken,name }) => {
+              if(output===data.name)
+              {
+                update(data1.id,data.doctoken);
+              }})
+            }
+      call();
+            
+            
+  let update = async (id,data) => {
+    let res = await fetch(`${"http://localhost:3/Appointment"}/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ "id":data}),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 }
 </script>
