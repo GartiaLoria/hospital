@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dtracker</title>
+    <style>
+        th{
+            height: 37px;
+            background: rgb(19,21,22);
+            background: linear-gradient(90deg, rgba(19,21,22,1) 0%, rgb(7, 16, 18) 64%, rgba(48,42,42,1) 100%);
+            color: white;
+        }
+        td{
+            color: black;
+            background-color: whitesmoke;
+        }
+        th,td{
+            border: 1px solid black;
+            position: relative;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+        table{
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin: 4% 0%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-image: url("https://t3.ftcdn.net/jpg/02/16/47/22/240_F_216472247_cT66WDoS0fp1s3wC7eaykMJNDGVbOBPq.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <table id="myTable" >
+           <thead>
+                <tr>
+                     <th>Name</th>
+                     <th>Date of Birth</th>
+                     <th>Address</th>
+                     <th>Gender</th>
+                     <th>Blood Group</th>
+                     <th>Phone Number</th>
+                     <th>Medical History</th>
+                     <th>Blood Donation History</th>
+                     <th>Organ Donation</th>
+                     <th>Date</th>
+                     <th>Time</th>
+                     <th>Disease</th>
+                 </tr>
+             </thead>
+    </table>
+    <button onclick="add()">Fetch Data</button>
+</body>
+</html>
+<script>
+    let add =async()=>{
+        let table=document.getElementById("myTable");
+        let tbody=document.createElement("tbody");
+        let res=await fetch("http://localhost:3000/patient_rec")
+        let datas=await res.json();
+        datas.forEach(el => {
+            let tr=document.createElement("tr");
+            tr.innerHTML=`<td>${el.name}</td>
+            <td>${el.DOB}</td>
+            <td>${el.Address}</td>
+            <td>${el.Gender}</td>
+            <td>${el.Blood_Group}</td>
+            <td>${el.Phone_Number}</td>
+            <td>${el.Medical_History}</td>
+            <td>${el.Blood_Donation_History}</td>
+            <td>${el.Organ_Donation}</td>
+            <td>${el.Date}</td>
+            <td>${el.Time}</td>
+            <td>${el.Disease}</td>`;
+            tbody.appendChild(tr);
+
+        });
+        table.appendChild(tbody);
+    }    
+    
+
+</script>
