@@ -1,72 +1,22 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" },
-    "docobj": 
-    [
-      {
-        "email": "drmanojkumar@gmail.com",
-        "password": "Manoj1234",
-        "doctoken": 1689370932108,
-        "name":"Dr.Manoj Kumar"
-      },
-      {
-        "email": "drsarita@gmail.com",
-        "password": "Sarita1789",
-        "doctoken": 1689370932108,
-        "name":"Dr.Sarita"
-      },
-      {
-        "email": "drsudhanshu@gmail.com",
-        "password": "Sudha6758",
-        "doctoken": 1689370932108,
-        "name":"Dr.Sudhanshu"
-      }
-    
-  ]
-    "Appointment": [
-    {
-      "patient": "",
-      "contact": "",
-      "docs": "",
-      "date": "",
-      "time": "",
-      "symptons": "",
-      "id":"" 
-    },
-    ],
-    "doctokens": [
-    [
-      1689370932108
+    "patients": [
+      { 
+        "pid": 1,
+        "fname": "loria",
+        "lname": "gartia",
+        "dob": "29th may",
+        "gender":"female",
+        "phone": 7750813696,
+        "mail":"loriamgartia@gmail.com",
+        "city":"Bhubaneswar",
+        "state": "Odisha",
+        "pin":751013,
+        "medic" : "yes",
+        "donor" : "yes",
+        "surgery" : "no",
+        "bgroup":"B +ve",
+        "weight":70 ,
+        "height": 165 
+        }
     ]
-  ],
-    "patient": [
-    {
-      "email": "manu@gmail.com",
-      "password": "Manuat5678",
-      "id": 1
-    },
-    {
-      "email": "Arpita@gmail.com",
-      "password": "Behera4567",
-      "id": 2
-    },
-    {
-      "email": "satya@gmail.com",
-      "password": "satyadeepu45",
-      "id": 3
-    },
-    {
-      "email": "radha@1234",
-      "password": "radha789",
-      "id": 4
-    }
-  ],
-    
-    
   }
-
