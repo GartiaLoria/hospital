@@ -1,71 +1,201 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Consultation</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0>
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation</title>
+    <style>
+        body{
+            background: radial-gradient(827px at 47.3% 48%, rgb(255, 255, 255) 0%, rgb(138, 192, 216) 90%);
+            
+        }
+        .text{
+            width:100%;
+             display:flex;
+             justify-content: center;
+             align-items: center;
+             flex-direction: column;
+             text-align: center;
+             margin:20px auto;
+             font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        .one {
+              
+           
+             display:inline-block;
+             margin-left:auto;
+             margin-right:auto;
+             text-align: left;
+            
+
+            
+            
+        }
+        div.form{
+            display: block;
+            text-align: center;
+        
+        }
+
+
+        .two{
+            width:90%;
+             display:flex;
+             justify-content: center;
+             
+             align-items: center;
+             flex-direction: column;
+             text-align: center;
+             margin:20px auto;
+        }
+        .saloni{
+            justify-content: center;
+            display: flex;
+            
+            margin: 50px 100px 50px 100px;
+            border :3px soild blue;
+            padding :30px;
+            background-color: rgb(138, 192, 216);
+            
+        }
+        .name{
+            
+            gap:1000px;
+            
+        }
+        .btn{
+            display: flex;
+            flex-direction: row;
+            display: inline-block;
+            color: #fff;
+            background-color: #0084ff;
+            border: none;
+            border-radius: 5px;
+            padding:12px 20 px;
+            font-size :18px;
+            cursor:pointer;
+        }
+        /* .contact{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap:40px;
+            text-align: center;
+        
+        }
+        .doc{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap:40px;
+             */
+
+         /* }
+        .date{ */
+            /* display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap:40px;
+            
+
+        }
+        .time{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap:40px;
+            
+        }
+        .symptons{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap:40px;
+            
+
+        }  */ 
+
+    </style>
+</head>
   <body>
-  <div class="container ">
-      <div class="row">
-          <div class="col">
-              <h2 class="text">
+           
+  
+              <h1 style="font-size: xx-large" class="text">
                   Appointment Form
-              </h2>
-              <form>
-                  <div class=" row">
-                      <label >
-                          Patient Name
-                      </label>
-                      <div class="col">
-                          <input type="text"id="patient-name"class="form-control"
-                          placeholder="Name"required>
-                      </div>
-                  </div>
-                  <div class=" row">
-                    <label >
-                        Contact
-                    </label>
-                    <div class="col">
-                        <input type="tel"id="contact"class="form-control"
-                        placeholder="your phone number"required>
-                    </div>
-                </div>
-                <div class=" row">
-                    <label >
-                      Date
-                    </label>
-                    <div class="col">
-                        <input type="date"id="date"class="form-control">
-                    </div>
-                </div>
-                <div class="row">
-                    <label >
-                       Time
-                    </label>
-                    <div class="col">
-                        <input type="time"id="time"class="form-control">
-                       </div>
-                </div>
-                <div class=" row">
-                    <label >
-                       Symptoms
-                    </label><br/>
-                        <textarea id="symptoms" class="form-control" required></textarea>
-                    </div><br/>
-                </div>
-                    <div class="col">
-                        <button type="submit"class="btn ">
-                            Confirm
-                        </button>
-                    </div>
+              </h1>
+              <div class = "saloni">
+              <form class ="one">
+                <div class =  "name">
+                <label style="font-size: x-large" >Patient Name</label>&nbsp;&nbsp;
+                <input type="text" id="patient-name" class="form-control" placeholder="Name" required><br><br>
+                </div></br>
+                <div class="contact">
+                <label style="font-size: x-large" >Contact</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="contact" class="form-control"placeholder="Phone number" required><br><br>
+                </div></br>
+                <div class="doc">               
+                 <label style="font-size: x-large" >Doctors</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <select id="docs" title="Doctors"><br><br>
+                    <option value = "">Select</option>
+                    <option value ="Dr.Manoj Kumar">Dr.Manoj Kumar</option>
+                    <option value = "Dr.Sarita">Dr.Sarita</option>
+                    <option value = "Dr.Sudhanshu">Dr.Sudhanshu</option>
+                  </select>
+                </div><br><br>
+                <div class="date">
+                <label style="font-size: x-large" >Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="date" id="date" class="form-control" placeholder="date"><br><br>
+                </div></br>
+                <div class="time">
+                 <label style="font-size: x-large" > Time</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="time"id="time"class="form-control" placeholder="time"><br><br>
+                </div></br>
+                <div class="symptons">
+                <label style="font-size: x-large"  > Symptoms</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <textarea id="symptoms" class="form-control" placeholder="write" required></textarea><br><br>
+                </div></br>     
               </form>
-          </div>
-      </div>
-  </div>
+              </div>
+              <div class="two">
+                <button  onclick = "submit()" class="btn">
+                    Get Appointment
+                </button>
+            </div>   
 </body>
 </html>
 <script>
-	
-	
+    let api="http://localhost:3/Appointment";
+  let submit = async() => {
+    let patient1 = document.getElementById("patient-name").value;
+    console.log(patient1);
+    let contact1 = document.getElementById("contact").value;
+    console.log(contact1);
+    selectelement = document.querySelector("#docs");
+    let output = selectelement.value;
+    console.log(output);
+    let date1 = document.getElementById("date").value;
+    console.log(date1);
+    let time1 = document.getElementById("time").value;
+    console.log(time1);
+    textelement = document.querySelector("#symptoms");
+    let input = textelement.value;
+    let detailsobj = {
+      patient:patient1,
+      contact:contact1,
+      docs:output,
+      date:date1,
+      time:time1,
+      symptons:input,
+    };
+    let res = await fetch(api,{
+            method:"POST",
+            body: JSON.stringify(detailsobj),
+            headers:{
+                "Content-Type":"application/json"
+            },
+        });
+        let data = await res.json();
+        console.log(data);
+}
 </script>
