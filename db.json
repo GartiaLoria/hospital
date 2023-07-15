@@ -31,3 +31,32 @@
       }
     
   ]
+    "Appointment": [
+    {
+      "patient": "kh",
+      "contact": "99",
+      "docs": "Dr.Manoj Kumar",
+      "date": "5639-01-06",
+      "time": "16:39",
+      "symptons": "oo",
+      "id": 1
+    },
+    {
+      "patient": "kh",
+      "contact": "99",
+      "docs": "Dr.Manoj Kumar",
+      "date": "5639-01-06",
+      "time": "16:39",
+      "symptons": "oo",
+      "id": 2
+    },
+    {
+      "patient": "kh",
+      "contact": "99",
+      "docs": "Dr.Manoj Kumar",
+      "date": "5639-01-06",
+      "time": "16:39",
+      "sympton;s": "oo",
+      "id": 3
+    }
+  ],
