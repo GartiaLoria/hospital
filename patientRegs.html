@@ -32,9 +32,8 @@ body{ background-color:#3CA55C; background: -webkit-linear-gradient(to right, #B
         <div class="heading">
             <h1 >Patient Details</h1>
         </div>
-		<br>
         <div class="form">
-            <form id="register" onsubmit="javascript:save_patients()" method="post">
+            <form id="register" action="/" method="post" onSubmit="savePatientForm(); return false;">
                 <h5 >PERSONAL DETAILS:</h5><hr>
 		  <div class="row">
 			<div class="col-md-6">
@@ -87,7 +86,7 @@ body{ background-color:#3CA55C; background: -webkit-linear-gradient(to right, #B
 			<div class="col-md-6">
 				<div class="form-group">
 				   <span class="form-label">Address</span>
-				   <input class="form-control" id="address" name="address" type="text" placeholder="Enter your address">
+				   <input class="form-control" id="address" name="address" type="text" placeholder="Enter your address" required>
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -135,7 +134,7 @@ body{ background-color:#3CA55C; background: -webkit-linear-gradient(to right, #B
 					<div class="form-group">
 						<span class="form-label" style="display:inline-block;">Have you had any previous surgeries?</span>
 						<div class="form-checkbox" style="display:inline-block;margin-left:30px">
-						   <label for="roundtrip" style="color: #fff;"><input type="radio" id="prev_surgeries1" name="prev_surgeries" value="yes" ><span></span>Yes</label>
+						   <label for="roundtrip" style="color: #fff;"><input type="radio" id="prev_surgeries1" name="prev_surgeries" value="yes"><span></span>Yes</label>
 						   <label for="one-way" style="color: #fff;"> <input type="radio" id="prev_surgeries2" name="prev_surgeries" value="no"> <span></span>No </label>
 						</div>
 					</div>
@@ -165,55 +164,75 @@ body{ background-color:#3CA55C; background: -webkit-linear-gradient(to right, #B
 			   </div>
 
 				<div class="btn">
-					<button class="button button2" onclick="save()">save</button>
+					<button  class="button button2" >save</button>
 				</div>
             </form>
         </div>
     </div>
 </div>
 </body>
-</html>
-<script>
-    let save_patients = async () => {
+<script type="text/javascript">
+
+ let savePatientForm = async () => {
+     	var prev_meds = document.getElementsByName('prev_medication');
+        for (var pvms of prev_meds)
+        {
+          if (pvms.checked) { var checked_prev_medication = pvms.value; }
+    	}
+     	var prev_sur = document.getElementsByName('prev_surgeries');
+        for (var pvs of prev_sur)
+        {
+          if (pvs.checked) { var checked_prev_surgeries = pvs.value; }
+    	}
+     	var prev_bd = document.getElementsByName('blood_donor');
+        for (var pbd of prev_bd)
+        {
+          if (pbd.checked) { var checked_blood_donor = pbd.value; }
+    	}
         let fname=document.getElementById("fname").value;
         let lname=document.getElementById("lname").value;
         let dob=document.getElementById("dob").value;
         let gender=document.getElementById("gender").value;
         let phone=document.getElementById("phone").value;
-        let mail=document.getElementById("mail").value;
+        let email=document.getElementById("email").value;
+        let address=document.getElementById("address").value;
         let city=document.getElementById("city").value;
         let state=document.getElementById("state").value;
-        let pin=document.getElementById("pincode").value;
-		let medic=document.getElementsByName("prev_medication");
-		let donor=document.getElementsByName("blood_donor");
-		let surgery=document.getElementsByName("prev_surgeries").value;
-		let bgroup=document.getElementById("blood_group").value;
+        let pincode=document.getElementById("pincode").value;
+		let prev_medication=checked_prev_medication;
+		let blood_donor=checked_blood_donor;
+		let prev_surgeries=checked_prev_surgeries;
+		let blood_group=document.getElementById("blood_group").value;
 		let weight=document.getElementById("weight").value;
 		let height=document.getElementById("height").value;
-        let obj= {
-            Fname : fname,
-            Lname : lname,
-            Dob : dob,
-            Gender : gender,
-            Phone : phone,
-            Mail : mail,
-            City : city,
-            State : state,
-            Pin : pin,
-			Medic : medic,
-			Donor : donor,
-			Surgery : surgery,
-			Bgroup : bgroup,
-			Weight : weight,
-			Height : height
+        let patientobj= {
+            firstname : fname,
+            lastname : lname,
+            dob : dob,
+            gender : gender,
+            phone : phone,
+            email : email,
+            address : address,
+            city : city,
+            state : state,
+            pincode : pincode,
+			prev_medication : prev_medication,
+			blood_donor : blood_donor,
+			prev_surgeries : prev_surgeries,
+			blood_group : blood_group,
+			weight : weight,
+			height : height
         };
-		console.log(obj);
-        let res= await fetch("http://localhost:3000/patients",{
+		console.log(patientobj);
+		let res= await fetch("http://localhost:3000/patients",{
             method: "POST",
-            body: JSON.stringify(obj),
+            body: JSON.stringify(patientobj),
             headers: {
                 "Content-Type": "application/json"
             }
         });
+        document.getElementById("register").reset();
+       alert('Patient added successfully.')
     }
 </script>
+</html>
