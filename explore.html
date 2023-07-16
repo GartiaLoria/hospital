@@ -12,7 +12,7 @@
 .footer-parts ul li{list-style:none; font-size:12px; padding:5px; margin:5px 0px; font-weight:bold;}
 .footer-parts ul li a{padding:8px 10px; margin:2px 0px; text-decoration:none; color:#CCC;}
 .footer-parts ul li a:hover{color:#FFF;}
-.copyrights{ width:1240px; font-size:12px; background:#000; float:left; padding:15px 30px 15px 30px; color:#FFF; }
+.copyrights{ width:1240px; font-size:12px; background:#1d794b; float:left; padding:15px 30px 15px 30px; color:#FFF; }
 .copyrights-left{ width:940px; float:left;}
 .copyrights-left a{ color:#FFF; text-decoration:none;}
 .copyrights-left a:hover{color:#CCC;}
@@ -34,7 +34,9 @@
              margin:20px auto;
              font-size: 50px;
              font-weight: 600;
-             background-image: linear-gradient(to left,#0e6980,#b393d3);
+             background: rgb(14,52,18);
+            background: linear-gradient(45deg, rgba(14,52,18,1) 15%, rgba(28,40,17,1) 44%, rgba(54,59,24,1) 47%, rgba(29,75,15,1) 94%);
+            border-radius: 2%;
              color:transparent;
              background-clip:text;
              -webkit-background-clip: text;
@@ -64,12 +66,39 @@
              flex-direction: column;
              text-align: center;
              margin:20px auto;
-             border: 20px solid #57cac3;
+             border: 10px solid #40513B;
              font-family: Arial, Helvetica, sans-serif;
 }
+.p{
+    color:#FFF;
+}
 body{
-            background: radial-gradient(827px at 47.3% 48%, rgb(255, 255, 255) 0%, rgb(138, 192, 216) 90%);
+    background: rgb(176,199,59);
+            background: linear-gradient(45deg, rgba(176,199,59,1) 26%, rgba(142,221,76,1) 51%, rgba(34,125,7,1) 94%);
         }
+        @media screen and (max-width:767px) {
+                .row{
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                
+            }
+            @media screen and (min-width:1024px) {
+                .row{
+                    display: flex;
+                    flex-wrap: nowrap;
+                }
+                
+                
+            }
+            @media screen and (min-width:767px) and (max-width:1024px) {
+                .row{
+                    display: flex;
+                    flex-wrap: nowrap;
+                }
+                
+                
+            }  
 </style>
 </head>
 <body>
@@ -79,7 +108,7 @@ body{
     <div class = "template">
         <img  class="image"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Vision_Flat_Icon.svg/768px-Vision_Flat_Icon.svg.png?20180301073008" width =20% height = 20% alt="" srcset="">
         <h2 class = "vision">Vision</h2>
-        <p>To create a world class integrated healthcare delivery system in india</p>
+        <p class="p">To create a world class integrated healthcare delivery system in india</p>
     </div>
     </div>
     <div class="footer">
@@ -112,7 +141,7 @@ body{
                 <a href="https://www.facebook.com/freetimelearn/" target="_blank"><i class="fa fa-facebook"></i></a>
                 <a href="https://www.linkedin.com/in/free-time-learn-07598b143/" target="_blank"><i class="fa fa-linkedin"></i></a> 
                 <a href="https://twitter.com/freetimelearn" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="https://plus.google.com/101612697119159092378" target="_blank"><i class="fa fa-google-plus"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-google-plus"></i></a>
             </div>
         </div>
         <div class="clearfix"></div>
