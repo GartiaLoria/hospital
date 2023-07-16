@@ -209,6 +209,7 @@
     // event.preventDefault();
     let patient1 = document.getElementById("patient-name").value;
     console.log(patient1);
+    let patientname1=document.getElementById("patient-name1").value;
     let contact1 = document.getElementById("contact").value;
     console.log(contact1);
     selectelement = document.querySelector("#docs");
@@ -221,12 +222,13 @@
     textelement = document.querySelector("#symptoms");
     let input = textelement.value;
     let detailsobj = {
-      patient:patient1,
+      fname:patient1,
+      lname:patientname1,
       contact:contact1,
       docs:output,
       date:date1,
       time:time1,
-      symptons:input,
+      symptoms:input,
     };
     let res = await fetch(api,{
             method:"POST",
