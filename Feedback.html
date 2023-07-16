@@ -15,6 +15,18 @@
              text-align: center;
              margin:20px auto;
         }
+        .btn{
+            display: flex;
+            flex-direction: row;
+            display: inline-block;
+            color: #fff;
+            background-color: #0084ff;
+            border: none;
+            border-radius: 5px;
+            padding:12px 20 px;
+            font-size :18px;
+            cursor:pointer;
+        }
         
 
 
@@ -56,7 +68,14 @@
 body{
             background: radial-gradient(827px at 47.3% 48%, rgb(255, 255, 255) 0%, rgb(138, 192, 216) 90%);
         }
+        input
+             {
+                background-color: #fff; height: 50px; color: #191a1e; border: none; font-size: 16px; font-weight: 400; -webkit-box-shadow: none; box-shadow: none; border-radius: 40px; padding: 0 25px; }
+.register hr{border-top: 1px solid #ffffff;
+            
+            
 
+        }
        
         
     </style>
@@ -91,12 +110,12 @@ body{
     <h1>FEEDBACK FORM</h1>
     
     <label>NAME</label>
-    <input id="name" type="text"/></br>
+    <input id="name" type="text"required></br>
     <label >CONTACT</label>
     <input id = "contact" type="text"/></br>
     <label >FEEDBACK</label>
     <input  id = "feedback"type="text"/>
-    <button onclick="save()">submit</button>
+    <button class ="btn" onclick="save()">submit</button>
     
     </div>
      
@@ -127,5 +146,7 @@ body{
                 "Content-Type":"application/json",
             }
         });
+        alert("FEEDBACK SUBMITTED SUCCESSFULLY");
+        
     };
 </script>
