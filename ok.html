@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="confirm">
+            <img src="images/next.png">
+        </div>
+        <button type="submit" class="btn" onclick="openPopup()">CONFIRM HERE ?</button>
+        <div class="popup" id="popup">
+            <img src="/images/m028t0154_c_icon_18sep22.jpg">
+            <div class="head">
+                <h2>Thank You!</h2>
+            </div>
+            <p>Your Details has been successfully submitted. Thanks!</p>
+            <div class="confirm">
+                <a type="button" href="">OK</a>//give the appointment or details page here//
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+    let popup = document.getElementById("popup");
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+    function closePopup(){
+        popup.classList.remove("open-popup");
+    }
+</script>

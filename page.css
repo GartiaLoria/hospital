@@ -99,3 +99,8 @@ input[type="submit"]:hover{
 .center p{
     margin-left: 10px;
 }
+@media (max-width:1004px) {
+  .center{
+    margin-left: 140px
+  }
+}

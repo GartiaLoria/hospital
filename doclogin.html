@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="docsignup.css">
   </head>
   <body>
-    <div class="logo"><img src="images/istockphoto-1004243378-612x612.jpg"></div>
+    <div class="logo"><img  src="images/istockphoto-1004243378-612x612.jpg"></div>
     <div class="head">
-        Hii DOCTOR!!!
+        GOOD MORNING DOCTOR!!!
     </div>
     <div class="center">
       <h1>Login</h1>
@@ -38,31 +38,22 @@
   </body>
 </html>
 <script>
-  let api = "http://localhost:3000/docobj";
+  let api = " http://localhost:3000/docobj";
     let docsignin = async() => {
         let email2 = document.getElementById("email").value;
         let pass2 = document.getElementById("password").value;
         let res = await fetch(api);
         let data = await res.json();
         console.log(data);
-        data.forEach(async (el) => {
+        data.forEach((el) => {
             if(email2==el.email && pass2==el.password){
-                let token = [el.doctoken];
-                let res1 = await fetch( "http://localhost:3000/doctokens",{
-                method:"POST",
-                body: JSON.stringify(token),
-                headers:{
-                "Content-Type":"application/json"
-                },
-             });
-                console.log(token);
                 window.alert("Login Successful");
+                window.location.assign("")//give the doctor tracker here
             }
         });
-        // data.forEach((el) => {
-        //   if(email2 == )
-        // })
+        window.location.assign("page.html");
     };
+   
   
 
 </script>

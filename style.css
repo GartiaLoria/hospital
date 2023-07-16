@@ -13,16 +13,8 @@ body{
   overflow: hidden;
 }
 body{
-  background: url(images/health-still-life-with-copy-space.jpg) center center fixed;
+  background: url(images/nobody-office-with-medical-equipment-instruments-checkup-visit-with-patient-healthcare-empty-cabinet-with-tools-consult-people-with-illness-professional-space.jpg) center center fixed;
   background-size: cover;
-}
-img{
-  width: 100px;
-  position: absolute;
-}
-.logo{
-  margin-left: 1350px;
-  /* background: none; */
 }
 .center{
   position: absolute;
@@ -124,24 +116,4 @@ input[type="submit"]:hover{
 }
 .signup_link a:hover{
   text-decoration: underline;
-}
-.head{
-  font-size: 45px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 45px;
-  color: 
-}
-@media (max-width:620px) {
-  .head{
-    font-size: 30px;
-  }
-  .center{
-    width: 500px;
-  }
-}
-@media (max-width:1000px) {
-  .logo{
-    text-align: center;
-  }
 }

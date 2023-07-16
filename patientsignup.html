@@ -19,11 +19,13 @@
           <span></span>
           <label>Password</label>
         </div>
+        <div class="warning">
+          <p>*your password must contain atleast 6 letters</p>
+          <p>*your password must contain one uppercase letters</p>
+          <p>*your password must contain one digit</p>
+        </div>
         <div class="signup_link">
           Already a member? <a href="/patientlogin.html">LogIn</a>
-        </div>
-        <div class="warning">
-
         </div>
       </form>
       <div class="patbut">
@@ -38,6 +40,16 @@
     let submit = async () =>{
         let email1 = document.getElementById("email").value;
         let pass1 = document.getElementById("password").value;
+        if(pass1.length<6){
+          alert("your password must contain atleast 6 letters");
+        }
+        if(/[A-Z]/g.test(pass1) == false){
+          alert( " password should contain 1 uppercase letter");
+      }
+      if(/\d/g.test(pass1) == false){
+                   window.alert("password should contain 1 digit");
+                }
+        else{
         let patientobj = {
             email:email1,
             password:pass1,
@@ -47,16 +59,18 @@
           alert("Please Enter Password");
         }
         else{
-       
+          // window.location.assign("ok.html");
         let res = await fetch(api,{
             method:"POST",
             body: JSON.stringify(patientobj),
             headers:{
                 "Content-Type":"application/json"
             },
+            
         });
-        // window.alert("SignupSuccessfull");
+         window.location.assign("ok.html");
     };
   }
+    };
 
 </script>
