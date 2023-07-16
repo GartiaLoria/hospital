@@ -19,6 +19,9 @@
              margin:20px auto;
              font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
+        .ta{
+
+        }
         
         .one {
               
@@ -132,6 +135,16 @@
             
 
         }  */ 
+        .col{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            margin:50px 0px 0px 0px;
+            
+        }
+        .form-control{
+            background-color: #fff; height: 50px; color: #191a1e; border: none; font-size: 16px; font-weight: 400; -webkit-box-shadow: none; box-shadow: none; border-radius: 40px; padding: 0 25px; }
+            .register hr{border-top: 1px solid #ffffff;
+        }
 
     </style>
 </head>
@@ -142,44 +155,49 @@
                   Appointment Form
               </h1>
               <div class = "saloni">
-              <form class ="one">
+                <div class="col">
+                    <div class ="img">
+                        <img src="https://www.riomed.com/wp-content/uploads/2021/11/blogpost.jpg" alt="appointment ">
+                    </div>
+              <form class ="one" action="/" method="post">
                 <div class =  "name">
                 <label style="font-size: x-large" >First Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="text" id="patient-name" class="form-control" placeholder="First Name" required><br><br>
+                <input type="text" id="patient-name"  class="form-control" placeholder="Enter your first Name"required><br><br>
                 </div></br>
                 <div class =  "name1">
-                    <label style="font-size: x-large" >Last Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="text" id="patient-name1" class="form-control" placeholder="LastName" required><br><br>
+                     <label style="font-size: x-large" >Last Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <input type="text" id="patient-name1" class="form-control" placeholder="Enter your last Name" ><br><br>
                     </div></br>
                 <div class="contact">
-                <label style="font-size: x-large" >Contact</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="text" id="contact" class="form-control"placeholder="Phone number" required><br><br>
+                <label style="font-size: x-large" class="ta" >Contact</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="contact" class="form-control"placeholder="Enter your phone number" ><br><br>
                 </div></br>
                 <div class="doc">               
-                 <label style="font-size: x-large" >Doctors</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <select  id="docs"  title="Doctors><br><br>
-                    <option value = "">Select</option>
-                    <option value ="Dr.Manoj Kumar">Dr.Manoj Kumar</option>
-                    <option value = "Dr.Sarita">Dr.Sarita</option>
-                    <option value = "Dr.Sudhanshu">Dr.Sudhanshu</option>
+                 <label style="font-size: x-large" class="ta" >Doctors</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <select  id="docs"  title="Doctors" class="form-control" ><br><br>
+                    <option value = "--select--">Select</option>
+                    <option value ="Dr.Manoj Kumar" class="form-control">Dr.Manoj Kumar</option>
+                    <option value = "Dr.Sarita" class="form-control">Dr.Sarita</option>
+                    <option value = "Dr.Sudhanshu" class="form-control">Dr.Sudhanshu</option>
                   </select>
                 </div><br><br>
                 <div class="date">
-                <label style="font-size: x-large" >Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label style="font-size: x-large" class="ta">Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="date" id="date" class="form-control" placeholder="date"><br><br>
                 </div></br>
                 <div class="time">
-                 <label style="font-size: x-large" > Time</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <label style="font-size: x-large" class="ta" > Time</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="time"id="time"class="form-control" placeholder="time"><br><br>
                 </div></br>
                 <div class="symptons">
-                <label style="font-size: x-large"  > Symptoms</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <textarea id="symptoms" class="form-control" placeholder="write" required></textarea><br><br>
+                <label style="font-size: x-large" class="ta"  > Symptoms</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <textarea id="symptoms" class="form-control" placeholder="write"></textarea><br><br>
                 </div></br>     
               </form>
               </div>
+              </div>
               <div class="two">
-                <button  onclick = "submit()" class="btn">
+                <button  onclick = "submit()" class="btn" type="submit">
                     Get Appointment
                 </button>
             </div>   
@@ -188,7 +206,7 @@
 <script>
     let api="http://localhost:3/Appointment";
   let submit = async(daa) => {
-    event.preventDefault();
+    // event.preventDefault();
     let patient1 = document.getElementById("patient-name").value;
     console.log(patient1);
     let contact1 = document.getElementById("contact").value;
@@ -217,37 +235,38 @@
                 "Content-Type":"application/json"
             },
         });
+        alert("Appointment done successfully!!");
         
         
 }
-let call = async () => {
+// let call = async () => {
     
       
-    selectelement = document.querySelector("#docs");
-    let output = selectelement.value;
-    console.log(output);
-    let res = await fetch("http://localhost:3/docobj");
-    let data = await res.json();
+//     selectelement = document.querySelector("#docs");
+//     let output = selectelement.value;
+//     console.log(output);
+//     let res = await fetch("http://localhost:3/docobj");
+//     let data = await res.json();
 
-    let res1 = await fetch("http://localhost:3/Appointment");
-    let data1 = await res1.json();
-    console.log(data1);
-    data.forEach(({ email,password,doctoken,name }) => {
-              if(output===data.name)
-              {
-                update(data1.id,data.doctoken);
-              }})
-            }
-      call();
+//     let res1 = await fetch("http://localhost:3/Appointment");
+//     let data1 = await res1.json();
+//     console.log(data1);
+//     data.forEach(({ email,password,doctoken,name }) => {
+//               if(output===data.name)
+//               {
+//                 update(data1.id,data.doctoken);
+//               }})
+//             }
+//       call();
             
             
-  let update = async (id,data) => {
-    let res = await fetch(`${"http://localhost:3/Appointment"}/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify({ "id":data}),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-}
+//   let update = async (id,data) => {
+//     let res = await fetch(`${"http://localhost:3/Appointment"}/${id}`, {
+//       method: "PATCH",
+//       body: JSON.stringify({ "id":data}),
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//     });
+//}
 </script>
