@@ -7,13 +7,25 @@
     <style>
         
         .one{
-             width:90%;
+            display: grid;
+            grid-template-columns: column;
+             width:50%;
              display:flex;
              justify-content: center;
              align-items: center;
              flex-direction: column;
              text-align: center;
              margin:20px auto;
+             border:1px solid #8a2be2;
+             border-radius:4px;
+             box-sizing: border-box;
+             box-shadow:#ffffff;
+             
+
+             
+        }
+        .one:hover{
+              background-color: #0084ff;
         }
         .btn{
             display: flex;
@@ -45,15 +57,18 @@
        height: 350px;
        display:flex;
        flex-direction: column;
+    
        padding: 20px;
        border: 5px solid  blueviolet;
-       border-radius: 20%;
+       border-radius: 10%;
+       box-shadow:#ffffff;
       
 }
 .two{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    justify-content:space-between;
+    justify-content:space-evenly;
+    
 }
 .heading{
               
@@ -63,7 +78,12 @@
              
              text-align: center;
              margin:20px auto;
-             font-style: italic;
+             font-size: 70px;
+             font-weight: 600;
+             background-image: linear-gradient(to left,#553c9a,#b393d3);
+             color:transparent;
+             background-clip:text;
+             -webkit-background-clip: text;
 }
 body{
             background: radial-gradient(827px at 47.3% 48%, rgb(255, 255, 255) 0%, rgb(138, 192, 216) 90%);
@@ -75,6 +95,12 @@ body{
             
             
 
+        }
+        .tag{
+            font-variant:unset;
+        }
+        .review:hover{
+            background-color: #0084ff;
         }
        
         
@@ -88,7 +114,7 @@ body{
     <div class = "review">
     
      <h1 >*****</h1>
-    <p>Dr Vijay Kumar Chennamchetty: We met Dr Vijay Chennamchetty last month with severe cough and sputum for my father Dr Varaprasad. His way of handling patients is excellent and so soothing that the patient feels immensely confident about recovery. Thanks to Dr. Vijay, within 2 weeks, he is completely normal.</p>
+    <p class = "tag">Dr Vijay Kumar Chennamchetty: We met Dr Vijay Chennamchetty last month with severe cough and sputum for my father Dr Varaprasad. His way of handling patients is excellent and so soothing that the patient feels immensely confident about recovery. Thanks to Dr. Vijay, within 2 weeks, he is completely normal.</p>
      <img  class ="image"src="https://st3.depositphotos.com/1017228/18878/i/600/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg"   width : 10px height :10px alt="" srcset="">
     </div>
     <div class = "review">
@@ -107,6 +133,7 @@ body{
     </div>
     </div>
     <div class = "one">
+        <div></div>
     <h1>FEEDBACK FORM</h1>
     
     <label>NAME</label>
@@ -150,3 +177,10 @@ body{
         
     };
 </script>
+          
+          
+     
+
+    
+
+      
