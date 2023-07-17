@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DocLoginPage</title>
+    <link rel="stylesheet" href="docsignup.css">
+  </head>
+  <body>
+    <div class="logo"><img  src="images/istockphoto-1004243378-612x612.jpg"></div>
+    <div class="head">
+        GOOD MORNING DOCTOR!!!
+    </div>
+    <div class="center">
+      <h1>Login</h1>
+      <form id="form">
+        <div class="txt_field">
+          <input type="email" id="email" placeholder="Email" required>
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="password" placeholder="Password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <!-- <div class="pass">Forgot Password?</div>                                                                                                              -->
+        <!-- <div class="signup_link">
+          Not a member? <a href="/patientsignup.html">Signup</a>
+        </div> -->
+      </form>
+      <div class="sign">
+        <button type="submit" onclick="docsignin()">Login</button>
+    </div>
+
+      
+    </div>
+
+  </body>
+</html>
+<script>
+  let api = " http://localhost:3000/docobj";
+    let docsignin = async() => {
+        let email2 = document.getElementById("email").value;
+        let pass2 = document.getElementById("password").value;
+        let res = await fetch(api);
+        let data = await res.json();
+        console.log(data);
+        data.forEach((el) => {
+            if(email2==el.email && pass2==el.password){
+                window.alert("Login Successful");
+                window.location.assign("")//give the doctor tracker here
+            }
+        });
+        window.location.assign("page.html");
+    };
+   
+  
+
+</script>

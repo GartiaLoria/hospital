@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="signup.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>SignUp</h1>
+      <form  id="form">
+        <div class="txt_field">
+          <input type="email" id="email"  required>
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="password"  required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="warning">
+          <p>*your password must contain atleast 6 characters</p>
+          <p>*your password must contain one uppercase letters</p>
+          <p>*your password must contain one digit</p>
+        </div>
+        <div class="signup_link">
+          Already a member? <a href="/patientlogin.html">LogIn</a>
+        </div>
+      </form>
+      <div class="patbut">
+        <button type="submit" onclick="submit()">Signup</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let api = "http://localhost:3000/patient"
+  let pass1 = document.getElementById("password").value;
+    let submit = async () =>{
+        let email1 = document.getElementById("email").value;
+        let pass1 = document.getElementById("password").value;
+        if(pass1.length<6){
+          alert("your password must contain atleast 6 letters");
+        }
+        if(/[A-Z]/g.test(pass1) == false){
+          alert( " password should contain 1 uppercase letter");
+      }
+      if(/\d/g.test(pass1) == false){
+                   window.alert("password should contain 1 digit");
+                }
+        else{
+        let patientobj = {
+            email:email1,
+            password:pass1,
+        };
+        if(patientobj.password=="")
+        {
+          alert("Please Enter Password");
+        }
+        else{
+          // window.location.assign("ok.html");
+        let res = await fetch(api,{
+            method:"POST",
+            body: JSON.stringify(patientobj),
+            headers:{
+                "Content-Type":"application/json"
+            },
+            
+        });
+         window.location.assign("ok.html");
+    };
+  }
+    };
+
+</script>
