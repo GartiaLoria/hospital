@@ -40,6 +40,10 @@
     let submit = async () =>{
         let email1 = document.getElementById("email").value;
         let pass1 = document.getElementById("password").value;
+        if(email1.length<6 || email == ""){
+          alert("please enter the Valid Username");
+          window.location.assign("patientsignup.html");
+        }
         if(pass1.length<6){
           alert("your password must contain atleast 6 letters");
         }

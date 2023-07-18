@@ -1,74 +1,127 @@
 {
-    "patients": [
-      { 
-        "pid": 1,
-        "fname": "loria",
-        "lname": "gartia",
-        "dob": "29th may",
-        "gender":"female",
-        "phone": 7750813696,
-        "mail":"loriamgartia@gmail.com",
-        "city":"Bhubaneswar",
-        "state": "Odisha",
-        "pin":751013,
-        "medic" : "yes",
-        "donor" : "yes",
-        "surgery" : "no",
-        "bgroup":"B +ve",
-        "weight":70 ,
-        "height": 165 
-        }
-    ], "docobj": [
-          {
-            "email": "drmanojkumar@gmail.com",
-            "password": "Manoj1234",
-            "doctoken": 8,
-            "name":"Dr.Manoj Kumar"
-          },
-          {
-            "email": "drsarita@gmail.com",
-            "password": "Sarita1789",
-            "doctoken": 9,
-            "name":"Dr.Sarita"
-          },
-          {
-            "email": "drsudhanshu@gmail.com",
-            "password": "Sudha6758",
-            "doctoken": 7,
-            "name":"Dr.Sudhanshu"
-          }
-        
-      ],
-        "appointment":[
-        {
-          "patient": "",
-          "contact": "",
-          "docs": "",
-          "date": "",
-          "time": "",
-          "symptons": "",
-          "id":"" 
-        }],
-        "patient": [
-        {
-          "email": "manu@gmail.com",
-          "password": "Manuat5678",
-          "id": 1
-        },
-        {
-          "email": "Arpita@gmail.com",
-          "password": "Behera4567",
-          "id": 2
-        },
-        {
-          "email": "satya@gmail.com",
-          "password": "satyadeepu45",
-          "id": 3
-        },
-        {
-          "email": "radha@1234",
-          "password": "radha789",
-          "id": 4
-        }
-      ]
-  }
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "docobj": [
+    {
+      "email": "drmanojkumar@gmail.com",
+      "password": "Manoj1234",
+      "doctoken": 1689370932108,
+      "name": "Dr.Manoj Kumar"
+    },
+    {
+      "email": "drsarita@gmail.com",
+      "password": "Sarita1789",
+      "doctoken": 1689370932108,
+      "name": "Dr.Sarita"
+    },
+    {
+      "email": "drsudhanshu@gmail.com",
+      "password": "Sudha6758",
+      "doctoken": 1689370932108,
+      "name": "Dr.Sudhanshu"
+    }
+  ],
+  "appointment": [
+    {
+      "fname": "Loria",
+      "lname": "Gartia",
+      "contact": "7750813696",
+      "docs": "Dr.Sarita",
+      "date": "2023-07-20",
+      "time": "10:30",
+      "symptoms": "stomach cramps",
+      "id": 1
+    }
+  ],
+  "patient": [
+    {
+      "email": "Manu@gmail.com",
+      "password": "Manu1234",
+      "id": 1
+    },
+    {
+      "email": "deepu@gmail.com",
+      "password": "Deepu2393",
+      "id": 2
+    },
+    {
+      "email": "loria@gmail.com",
+      "password": "Loria123",
+      "id": 3
+    }
+  ],
+  "patients": [
+    {
+      "fname": "S",
+      "lname": "Manohar",
+      "dob": "2023-07-20",
+      "gender": "male",
+      "contact": "07681049286",
+      "mail": "cst.21bctc71@silicon.ac.in",
+      "address": "near Shiv mandir",
+      "city": "Jharkhand",
+      "state": "Bihar",
+      "pin": "78907",
+      "medic": "no",
+      "donor": "yes",
+      "surgery": "no",
+      "bgroup": "O+ve",
+      "weight": "78",
+      "height": "170",
+      "id": 1
+    },
+    {
+      "fname": "Mani",
+      "lname": "Deepa",
+      "dob": "1979-03-03",
+      "gender": "female",
+      "contact": "9556033368",
+      "mail": "deepu@gmail.com",
+      "address": "near Shiv mandir",
+      "city": "Jajpur",
+      "state": "road",
+      "pin": "755019",
+      "medic": "no",
+      "donor": "yes",
+      "surgery": "no",
+      "bgroup": "O+ve",
+      "weight": "60",
+      "height": "150",
+      "id": 2
+    },
+    {
+      "fname": "Loria",
+      "lname": "Gartia",
+      "dob": "2003-05-29",
+      "gender": "female",
+      "contact": "7750813696",
+      "mail": "loria@gmail.com",
+      "address": "Jaydev Vihar",
+      "city": "Bhubaneswar",
+      "state": "Odisha",
+      "pin": "751013",
+      "medic": "no",
+      "donor": "yes",
+      "surgery": "no",
+      "bgroup": "B+ve",
+      "weight": "78",
+      "height": "165",
+      "id": 3
+    }
+  ]
+}

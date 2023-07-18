@@ -8,7 +8,7 @@
   <body>
     <div class="logo"><img  src="images/istockphoto-1004243378-612x612.jpg"></div>
     <div class="head">
-        GOOD MORNING DOCTOR!!!
+        HELLO DOCTOR!!!
     </div>
     <div class="center">
       <h1>Login</h1>
@@ -38,7 +38,7 @@
   </body>
 </html>
 <script>
-  let api = " http://localhost:3000/docobj";
+  let api = "http://localhost:3000/docobj";
     let docsignin = async() => {
         let email2 = document.getElementById("email").value;
         let pass2 = document.getElementById("password").value;
@@ -48,12 +48,8 @@
         data.forEach((el) => {
             if(email2==el.email && pass2==el.password){
                 window.alert("Login Successful");
-                window.location.assign("")//give the doctor tracker here
+                window.location.assign("Dtracker.html");
             }
         });
-        window.location.assign("page.html");
     };
-   
-  
-
 </script>
