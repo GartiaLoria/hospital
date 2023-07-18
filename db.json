@@ -46,6 +46,16 @@
       "time": "10:30",
       "symptoms": "stomach cramps",
       "id": 1
+    },
+    {
+      "fname": "Loria",
+      "lname": "Gartia",
+      "contact": "7750813696",
+      "docs": "Dr.Manoj Kumar",
+      "date": "2023-07-28",
+      "time": "10:30",
+      "symptoms": "vommiting",
+      "id": 2
     }
   ],
   "patient": [
