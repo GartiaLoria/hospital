@@ -16,11 +16,12 @@
              flex-direction: column;
              text-align: center;
              margin:20px auto;
-             border:5px solid #609966;
+             /* border:5px solid #609966; */
+             border: 4px solid  #9bda7cc0;
              border-radius:4px;
              box-sizing: border-box;
-             box-shadow:#ffffff;
-             
+             /* box-shadow:#ffffff; */
+             box-shadow: -9px 9px 3px 1px rgba(112, 168, 39, 0.521);             
 
              
         }
@@ -45,11 +46,13 @@
 
 .image
 {
-               width: 100px;
+               width: 180px;
                  height: 100px;
-                
-                 border: 1px solid  whitesmoke;
-                border-radius: 50%;
+                align-items: center;
+                 border: 1px solid  rgba(168, 231, 51, 0);
+                 box-shadow: -4px 4px 2px 1px rgba(112, 168, 39, 0.521);
+                /* border-radius: 50%; */
+                border-radius: 4%;
      
 }
 .review{
@@ -59,8 +62,9 @@
        flex-direction: column;
     
        padding: 20px;
-       border: 5px solid  #609966;
-       border-radius: 10%;
+       border: 3px solid  #9bda7cc0;
+       border-radius: 6%;
+       box-shadow: -8px 8px 2px 1px rgba(112, 168, 39, 0.521);
        box-shadow:#ffffff;
       
 }
@@ -80,7 +84,9 @@
              font-size: 70px;
              font-weight: 600;
              background-image: linear-gradient(to left,#40513B,#609966);
-             color:transparent;
+             color: #cbf1c6f3;
+             text-shadow: -3px 3px rgba(0, 0, 0, 0.3);
+             /* color:transparent; */
              background-clip:text;
              -webkit-background-clip: text;
 }
@@ -100,7 +106,8 @@ body{
             font-variant:unset;
         }
         .review:hover{
-            background-color:#609966;
+            /* background-color:#609966; */
+            background-color: #609966;
         }
         .heart{
             width: 26px;
@@ -110,10 +117,6 @@ body{
                 .two{
                     display: flex;
                     flex-wrap: wrap;
-                }
-                input{
-                    font-size: 8px;
-                    font-weight: 200px;
                 }
                 
             }
@@ -137,59 +140,61 @@ body{
     </style>
 </head>
 <body>
-    <div class ="five">
+    <div class ="five" style="padding-bottom: 6%;">
         <h1 class = "heading">Customer Reviews</h1>
     </div>
     <div class ="two">
     <div class = "review">
         <div style="display: flex;">
             <div>
-                <img class="heart" src="heartbeat.png" alt="heart">
-                <img class="heart" src="heartbeat.png" alt="heart">
-                <img class="heart" src="heartbeat.png" alt="heart">
-                <img class="heart" src="heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
                 <!-- <img class="heart" src="heart.png" alt="heart"> -->
             </div>
         </div>
     
      
-    <p class = "tag">Dr Vijay Kumar Chennamchetty: We met Dr Vijay Chennamchetty last month with severe cough and sputum for my father Dr Varaprasad. His way of handling patients is excellent and so soothing that the patient feels immensely confident about recovery. Thanks to Dr. Vijay, within 2 weeks, he is completely normal.</p>
-     <img  class ="image"src="https://st3.depositphotos.com/1017228/18878/i/600/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg"   width : 20px height :20px alt="" srcset="">
+    <p class = "tag">Dr. Sneha Patel: I had the privilege of consulting Dr. Sneha Patel for my recurring migraines. Her approach to patient care is exceptional, and she made me feel at ease throughout the treatment. Thanks to her expertise, my migraines have significantly reduced, and I'm grateful for her thoughtful and compassionate care.
+
+    </p>
+     <img  class ="image"src="male1-no-bg.png"   width : 20px height :20px alt="" srcset="">
     </div>
     <div class = "review">
         <div style="display: flex;">
             <div>
-                <img class="heart" src="heartbeat.png" alt="heart">
-                <img class="heart" src="heartbeat.png" alt="heart">
-                <img class="heart" src="heartbeat.png" alt="heart">
-                <img class="heart" src="heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
                 <!-- <img class="heart" src="heart.png" alt="heart"> -->
             </div>
         </div>
     
-        
-       <p>Dr Vijay Kumar Chennamchetty: We met Dr Vijay Chennamchetty last month with severe cough and sputum for my father Dr Varaprasad. His way of handling patients is excellent and so soothing that the patient feels immensely confident about recovery. Thanks to Dr. Vijay, within 2 weeks, he is completely normal.</p>
-        <img  class ="image"src="https://st3.depositphotos.com/1017228/18878/i/600/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg"   width : 10px height :10px alt="" srcset="">
+
+        <p>Dr. Ravi Singh: My experience with Dr. Ravi Singh was exceptional. I sought his expertise for my chronic back pain, and he patiently listened to my concerns, providing me with comprehensive guidance. Dr. Singh's caring nature and dedication to patient well-being truly made a difference in my healing journey.</p>
+         <img  class ="image"src="female-doc-no-bg.png"   width : 5% height :5% alt="" srcset=""> <!--https://st3.depositphotos.com/1017228/18878/i/600/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg -->
        </div>
        <div class = "review">
         <div style="display: flex;">
             <div>
-                <img class="heart" src="heartbeat.png" alt="heart">
-                <img class="heart" src="heartbeat.png" alt="heart">
-                <img class="heart" src="heartbeat.png" alt="heart">
-                <img class="heart" src="heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
+                <img class="heart" src="Homepage/Homepage/heartbeat.png" alt="heart">
                 <!-- <img class="heart" src="heart.png" alt="heart"> -->
             </div>
         </div>
     
         
-       <p>Dr Vijay Kumar Chennamchetty: We met Dr Vijay Chennamchetty last month with severe cough and sputum for my father Dr Varaprasad. His way of handling patients is excellent and so soothing that the patient feels immensely confident about recovery. Thanks to Dr. Vijay, within 2 weeks, he is completely normal.</p>
-        <img  class ="image"src="https://st3.depositphotos.com/1017228/18878/i/600/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg"   width : 10px height :10px alt="" srcset="">
+        <p>Dr. Ayesha Khan: I recently visited Dr. Ayesha Khan for a skin condition that had been bothering me for months. Her expertise and gentle demeanor instantly put me at ease. Thanks to her prescribed treatment, my skin has greatly improved, and I'm genuinely appreciative of her compassionate care.</p>
+        <img  class ="image"src="male2-no-bg.png"   width : 4% height :6% alt="" srcset="">
        </div>
 
     </div>
     </div>
-    <div class = "one">
+    <div class = "one" style="margin-top: 9%;">
         <div></div></br>
     <h1>FEEDBACK FORM</h1>
     
@@ -199,7 +204,7 @@ body{
     <input id = "contact" type="text"/></br>
     <label >FEEDBACK</label>
     <input  id = "feedback"type="text"/>
-    <button class ="btn" onclick="save()">submit</button>
+    <button class ="btn" onclick="save()" style="margin-top: 3%;margin-bottom: 2%;">submit</button>
     
     </div>
      
